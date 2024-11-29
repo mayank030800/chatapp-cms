@@ -1,4 +1,6 @@
 'use strict';
+const { setupWebSocket } = require('../src/websocket/websocket'); // Adjust the path to where websocket.js is stored
+
 
 module.exports = {
   /**
@@ -16,5 +18,11 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap(strapi) {
+    // const server = strapi.server.httpServer;
+
+    // Setup WebSocket server with additional functionality
+    // setupWebSocket(server);
+  },
+
 };
